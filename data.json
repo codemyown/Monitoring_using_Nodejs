@@ -1,0 +1,9 @@
+{
+  "users": [
+    { "name": "User 1", "status": "pending" },
+    { "name": "User 2", "status": "completed" },
+    { "name": "User 3", "status": "pending" },
+    { "name": "User 4", "status": "completed" },
+    { "name": "User 5", "status": "pending" }
+  ]
+}

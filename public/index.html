@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Monitoring Dashboard</title>
+</head>
+<body>
+  <div class="dashboard">
+    <div class="sidebar">
+      <h2>Dashboard</h2>
+      <div class="tabs">
+        <button class="tab" onclick="switchTab('overview')">Overview</button>
+        <button class="tab" onclick="switchTab('pending')">Pending</button>
+        <button class="tab" onclick="switchTab('completed')">Completed</button>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="header">
+        <h1>Monitoring Dashboard</h1>
+        <input type="text" id="searchInput" oninput="search()" placeholder="Search...">
+      </div>
+      
+      <div id="overview" class="tab-content">
+        <!-- Overview content goes here -->
+        <p>Overview content...</p>
+      </div>
+      
+      <form id="addUserForm" onsubmit="addUser(event)">
+        <label for="userName">User Name:</label>
+        <input type="text" id="userName" required>
+        <label for="userStatus">Status:</label>
+        <select id="userStatus" required>
+          <option value="pending">Pending</option>
+          <option value="completed">Completed</option>
+        </select>
+        <button type="submit">Add User</button>
+      </form>
+      
+      <div id="pending" class="tab-content">
+        <table id="userTable">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="userList"></tbody>
+        </table>
+        
+        <!-- Add User Form -->
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
